@@ -1,0 +1,17 @@
+{% extends 'articles/base.html' %}
+
+{% block title %}
+cоздание таска
+{% endblock %}
+
+{%block text%}
+	<h1>Создание тасков</h1>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.article_title }}<br>
+		{{ form.article_text }}<br>
+		
+		<button tupe="submit" class="btn btn-success">Добавить</button>
+	</form>
+{% endblock %}
+
